@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jouribe- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/16 18:29:03 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/16 18:30:08 by portega-         ###   ########.fr       */
+/*   Created: 2025/07/12 16:05:03 by jouribe-          #+#    #+#             */
+/*   Updated: 2025/07/12 16:07:52 by jouribe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+#include <unistd.h>
+
+void	ft_putchar(char c)
 {
-	*div = a / b;
-	*mod = a % b;
+	write(1, &c, 1);
 }

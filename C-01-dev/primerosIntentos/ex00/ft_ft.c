@@ -1,17 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/16 18:29:03 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/16 18:30:08 by portega-         ###   ########.fr       */
+/*   Created: 2025/07/15 13:55:36 by portega-          #+#    #+#             */
+/*   Updated: 2025/07/15 14:41:45 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+#include <stdio.h>
+
+void	ft_ft(int *nbr)
 {
-	*div = a / b;
-	*mod = a % b;
+	*nbr = 42;	
+}
+
+int main (void)
+{
+	int	num;
+	int	*nbr;
+
+	num = 10;
+	nbr = &num;
+	printf("el puntero apunta: %d \n", *nbr);
+	ft_ft(nbr);
+	printf("Tras la llamada el puntero apunta: %d", *nbr);
 }

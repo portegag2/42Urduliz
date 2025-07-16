@@ -7,3 +7,9 @@ Punteros:
 Estructura:
     - Para compilar todos los .c que estén en subcarpetas del main:
         - gcc -Wall -Wextra -Werror main.c ex*/*.c -o programa
+Norminette:
+    - Para pasar el norminette desde el directorio del proyecto y que repaso obvie los de "/primerosIntentos2 y el "main.c":
+        - find . -type f \( -name "*.c" -o -name "*.h" \) \
+    -not -path "./primerosIntentos/*" \
+    -not -name "main.c" \
+    -exec norminette {} +

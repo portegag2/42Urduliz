@@ -1,17 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/16 18:29:03 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/16 18:30:08 by portega-         ###   ########.fr       */
+/*   Created: 2025/07/16 18:36:07 by portega-          #+#    #+#             */
+/*   Updated: 2025/07/16 18:51:15 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	*div = a / b;
-	*mod = a % b;
+	int	temp;
+
+	temp = *a / *b;
+	*b = *a % *b;
+	*a = temp;
 }
