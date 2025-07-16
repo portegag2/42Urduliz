@@ -9,6 +9,7 @@ void    ft_ultimate_ft(int *********nbr);
 void    ft_swap(int *a, int *b);
 void    ft_div_mod(int a, int b, int *div, int *mod);
 void    ft_ultimate_div_mod(int *a, int *b);
+void	ft_putstr(char *str);
 
 void main00 (void)
 {
@@ -107,6 +108,17 @@ void main04 (void)
 	printf("Finalmente a y b: %d - %d \n", num1, num2);
 }
 
+void main05 (void)
+{
+	char palabra[] = "Hola mundo";
+	char *ptr_palabra;
+
+	ptr_palabra = palabra;
+	printf("Finalmente a y b: %d \n", *ptr_palabra);
+	ft_putstr(ptr_palabra);
+	
+}
+
 int main(int argc, char *argv[])
 {
     int ejercicio;
@@ -151,6 +163,10 @@ int main(int argc, char *argv[])
         case 5:
             printf("=== Ejercicio 5 ===\n");
             main04();
+            break;
+		case 6:
+            printf("=== Ejercicio 6 ===\n");
+            main05();
             break;
 
         default:
