@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 13:37:51 by marvin            #+#    #+#             */
-/*   Updated: 2025/07/17 15:51:00 by portega-         ###   ########.fr       */
+/*   Created: 2025/07/17 15:53:08 by portega-          #+#    #+#             */
+/*   Updated: 2025/07/17 16:10:58 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr(char *str)
+int	ft_strlen(char *str)
 {
+	int	cont;
+
+	cont = 0;
 	while (*str)
 	{
-		write(1, str, 1);
+		cont++;
 		str++;
 	}
+	return (cont);
 }

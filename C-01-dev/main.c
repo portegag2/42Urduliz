@@ -10,6 +10,7 @@ void    ft_swap(int *a, int *b);
 void    ft_div_mod(int a, int b, int *div, int *mod);
 void    ft_ultimate_div_mod(int *a, int *b);
 void	ft_putstr(char *str);
+int	ft_strlen(char *str);
 
 void main00 (void)
 {
@@ -36,7 +37,7 @@ void main01 (void)
 	int *******ptr7;
 	int ********ptr8;
 	int *********ptr9;
-	
+
 	num = 10;
 	ptr1 = &num;
 	ptr2 = &ptr1;
@@ -73,11 +74,11 @@ void main03 (void)
 	int	num1;
 	int num2;
 	int quot;
-	int rem;	
+	int rem;
 	int	*ptr_quot;
 	int *ptr_rem;
 
-    
+
 	num1 = 75;
 	num2 = 13;
 	quot = 0;
@@ -93,7 +94,7 @@ void main03 (void)
 void main04 (void)
 {
 	int	num1;
-	int num2;	
+	int num2;
 	int	*ptr_quot;
 	int *ptr_rem;
 
@@ -114,15 +115,29 @@ void main05 (void)
 	char *ptr_palabra;
 
 	ptr_palabra = palabra;
-	printf("Finalmente a y b: %d \n", *ptr_palabra);
+
 	ft_putstr(ptr_palabra);
-	
+
 }
+
+void main06 (void)
+{
+	char palabra[] = "Hola mundo mas";
+	char *ptr_palabra;
+	int length_str;
+
+	ptr_palabra = palabra;
+	length_str = ft_strlen(ptr_palabra);
+	printf("La longitud de: %s es %d \n", palabra, length_str);
+
+}
+
+
 
 int main(int argc, char *argv[])
 {
     int ejercicio;
-    
+
     // Si no se pasa argumento, usar valor por defecto
     if (argc == 1)
     {
@@ -139,7 +154,7 @@ int main(int argc, char *argv[])
         printf("Ejercicios disponibles: 1, 2, 3\n");
         return (1);
     }
-    
+
     // Resto del código igual...
     switch (ejercicio)
     {
@@ -147,7 +162,7 @@ int main(int argc, char *argv[])
             printf("=== Ejercicio 1 ===\n");
             main00();
             break;
-        
+
         case 2:
             printf("=== Ejercicio 2 ===\n");
             main01();
@@ -168,12 +183,15 @@ int main(int argc, char *argv[])
             printf("=== Ejercicio 6 ===\n");
             main05();
             break;
-
+		case 7:
+            printf("=== Ejercicio 7 ===\n");
+            main06();
+            break;
         default:
             printf("Error: Ejercicio %d no existe\n", ejercicio);
             return (1);
     }
-    
+
     return (0);
 }
 
