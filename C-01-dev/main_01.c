@@ -134,7 +134,7 @@ void main06 (void)
 
 
 
-int main(int argc, char *argv[])
+int main_1(int argc)
 {
     int ejercicio;
 

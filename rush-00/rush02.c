@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rush02.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 09:39:52 by marvin            #+#    #+#             */
-/*   Updated: 2025/07/13 09:39:52 by marvin           ###   ########.fr       */
+/*   Updated: 2025/07/22 19:06:35 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,16 @@ char ft_decidir_caracter(int i, int j, int x, int y, int modulo)
     // 6 relleno columna izquierda
     // 7 relleno columna derecha
     // 8 relleno area interior
-    char modulos_caracteres[5][8];
+
+    char *modulos_caracteres[] = {
+        "",   // caso 1
+        "AACCBBBB ",
+        "",
+        ""   // caso 2
+    };
     int posicion_matriz_coordenadas;
-    modulos_caracteres[2] = {'A', 'A', 'C', 'C', 'B', 'B', 'B', 'B', ' '}; //modulo 2
+    //modulos_caracteres[2] = {'A', 'A', 'C', 'C', 'B', 'B', 'B', 'B', ' '}; //modulo 2
+    //modulos_caracteres[2] = "AACCBBBB "; //modulo 2
     if (i == 1 && j == 1)
         posicion_matriz_coordenadas = 0;
     else if (i == 1 && j == x)

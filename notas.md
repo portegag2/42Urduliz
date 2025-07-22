@@ -12,4 +12,4 @@ Norminette:
         - find . -type f \( -name "*.c" -o -name "*.h" \) \
     -not -path "./primerosIntentos/*" \
     -not -name "main.c" \
-    -exec norminette {} +
+    -exec norminette -R CheckForbiddenSourceHeader {} +
