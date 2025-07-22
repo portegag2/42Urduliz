@@ -6,7 +6,7 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 21:24:44 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/10 23:04:50 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/17 17:59:42 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ void	ft_print_numbers(void)
 	}
 }
 
-/*
 int	main(void)
 {
 	ft_print_numbers();
 }
-*/
