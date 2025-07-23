@@ -6,9 +6,11 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 17:59:41 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/16 18:00:50 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/23 16:08:20 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../../index_components.h"
 
 void	ft_ultimate_ft(int *********nbr)
 {

@@ -1,4 +1,6 @@
-int main_0(int argc)
+#include "../index_components.h"
+
+int main_00(int argc)
 {
     int ejercicio;
 
@@ -14,32 +16,32 @@ int main_0(int argc)
     {
         case 1:
             printf("=== Ejercicio 1 ===\n");
-            main00();
+            //main00();
             break;
 
         case 2:
             printf("=== Ejercicio 2 ===\n");
-            main01();
+            //main01();
             break;
         case 3:
             printf("=== Ejercicio 3 ===\n");
-            main02();
+            //main02();
             break;
         case 4:
             printf("=== Ejercicio 4 ===\n");
-            main03();
+            //main03();
             break;
         case 5:
             printf("=== Ejercicio 5 ===\n");
-            main04();
+            //main04();
             break;
 		case 6:
             printf("=== Ejercicio 6 ===\n");
-            main05();
+            //main05();
             break;
 		case 7:
             printf("=== Ejercicio 7 ===\n");
-            main06();
+            //main06();
             break;
         default:
             printf("Error: Ejercicio %d no existe\n", ejercicio);

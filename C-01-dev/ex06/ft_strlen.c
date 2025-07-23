@@ -6,9 +6,11 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 15:53:08 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/17 16:10:58 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/23 16:38:29 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../../index_components.h"
 
 int	ft_strlen(char *str)
 {

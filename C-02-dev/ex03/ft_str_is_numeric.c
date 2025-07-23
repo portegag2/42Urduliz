@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/16 17:21:09 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/23 16:07:59 by portega-         ###   ########.fr       */
+/*   Created: 2025/07/23 21:08:31 by portega-          #+#    #+#             */
+/*   Updated: 2025/07/23 21:36:34 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../index_components.h"
 
-void	ft_ft(int *nbr)
+int	ft_str_is_numeric(char *str)
 {
-	*nbr = 42;
+	if (*str){
+		while(*str)
+		{
+			if (!(*str >= '0' && *str <= '9'))
+				return 0;
+			str++;
+		}
+	}
+	return 1;
 }

@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/16 17:21:09 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/23 16:07:59 by portega-         ###   ########.fr       */
+/*   Created: 2025/07/23 18:59:56 by portega-          #+#    #+#             */
+/*   Updated: 2025/07/23 19:50:13 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../index_components.h"
 
-void	ft_ft(int *nbr)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	*nbr = 42;
+	unsigned int i;
+
+	i = 0;
+	while(i<n && src[i]!='\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while(i<n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+
+	return (dest);
 }

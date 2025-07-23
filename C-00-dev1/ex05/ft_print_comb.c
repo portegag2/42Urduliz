@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: portega- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 19:07:35 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/17 21:06:32 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/23 17:53:52 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "../../index_components.h"
 
 void	ft_print_comb(void)
 {
@@ -40,7 +40,7 @@ void	ft_print_comb(void)
 	}
 }
 
-int	main(void)
+int	main_print_comb(void)
 {
 	ft_print_comb();
 	return (0);

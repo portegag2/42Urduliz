@@ -6,9 +6,11 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 18:29:03 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/16 18:30:08 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/23 16:08:46 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../../index_components.h"
 
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {

@@ -1,3 +1,4 @@
+#include "../index_components.h"
 
 
 #include <stdio.h>
@@ -134,29 +135,11 @@ void main06 (void)
 
 
 
-int main_1(int argc)
+int main_01(int argc)
 {
-    int ejercicio;
-
-    // Si no se pasa argumento, usar valor por defecto
-    if (argc == 1)
-    {
-        ejercicio = 1;  // Valor por defecto
-        printf("Sin argumentos, ejecutando ejercicio %d por defecto\n", ejercicio);
-    }
-    else if (argc == 2)
-    {
-        ejercicio = atoi(argv[1]);
-    }
-    else
-    {
-        printf("Uso: %s [número_ejercicio]\n", argv[0]);
-        printf("Ejercicios disponibles: 1, 2, 3\n");
-        return (1);
-    }
 
     // Resto del código igual...
-    switch (ejercicio)
+    switch (argc)
     {
         case 1:
             printf("=== Ejercicio 1 ===\n");
@@ -188,7 +171,7 @@ int main_1(int argc)
             main06();
             break;
         default:
-            printf("Error: Ejercicio %d no existe\n", ejercicio);
+            printf("Error: Ejercicio %d no existe\n", argc);
             return (1);
     }
 

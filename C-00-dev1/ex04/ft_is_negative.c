@@ -6,11 +6,11 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 22:51:14 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/10 22:57:13 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/23 16:39:16 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "../../index_components.h"
 
 void	ft_is_negative(int n)
 {

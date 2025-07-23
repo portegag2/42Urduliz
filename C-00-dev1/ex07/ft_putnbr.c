@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include "../../index_components.h"
 
 void ft_putnbr(int nb)
 {
@@ -18,7 +19,7 @@ void ft_putnbr(int nb)
 	}
 }
 
-int main (void)
+int main_putnbr (void)
 {
 	ft_putnbr(0);
 	write(1, "\n", 1);
@@ -30,4 +31,6 @@ int main (void)
 	write(1, "\n", 1);
 	ft_putnbr(12345);
 	write(1, "\n", 1);
+
+	return (0);
 }

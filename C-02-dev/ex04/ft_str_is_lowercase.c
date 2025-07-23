@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/16 17:21:09 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/23 16:07:59 by portega-         ###   ########.fr       */
+/*   Created: 2025/07/23 22:06:06 by portega-          #+#    #+#             */
+/*   Updated: 2025/07/23 22:12:22 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../index_components.h"
 
-void	ft_ft(int *nbr)
+int	ft_str_is_lowercase(char *str)
 {
-	*nbr = 42;
+	if(*str)
+	{
+		while(*str)
+		{
+			if(!(*str >= 'a' && *str <= 'z'))
+			{
+				return (0);
+			}
+			str++;
+		}
+	}
+	return (1);
 }

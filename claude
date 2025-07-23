@@ -1,0 +1,40 @@
+La estructura del proyecto es:
+- index_components.h
+- main.c
+- Makefile
+- C-00-dev1
+	- ex00
+		-ft_putchar.c
+	- ex01
+		-ft_print_alphabet.c
+	...
+	main._00.c
+- C-01-dev
+	- ex00
+		-ft_ft.c
+	- ex01
+		-ft_ultimate_ft.c
+	...
+	main._01.c
+- C-02-dev
+
+Hay más archivos y subdirectorios pero no me interesan para el Makefile.
+
+Calcula que hay hasta ex09 en cada carpeta C-0X-dev.
+En la funcion main principal si el primer argumento es 0 invocara a main_00 si es 1 a main_01 y si es 2 a main_3  y no hará nada más.
+		
+Me interesa que corrigas el contenido de main.c para adaptarse eso.
+
+Además de si se puede crear un script para que introduzca en todos los archivos la referencia al include_componets, con su path correcto para cada cual.
+
+Y por supuesto que index_components.h contenga las funciones, aunque luego las detallare yo.
+
+¿como lo ves?
+
+
+- ex00
+                -ft_putchar.c
+        - ex01
+                -ft_print_alphabet.c
+        ...
+        main._00.c

@@ -1,5 +1,5 @@
 
-#include <unistd.h>
+#include "../../index_components.h"
 
 void ft_combi_array (int a)
 {

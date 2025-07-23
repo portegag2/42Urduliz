@@ -6,11 +6,11 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 21:24:44 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/17 17:59:42 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/23 17:55:39 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "../../index_components.h"
 
 void	ft_print_numbers(void)
 {
@@ -24,7 +24,8 @@ void	ft_print_numbers(void)
 	}
 }
 
-int	main(void)
+int	main_print_numbers(void)
 {
 	ft_print_numbers();
+	return (0);
 }

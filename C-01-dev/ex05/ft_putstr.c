@@ -6,11 +6,11 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 13:37:51 by marvin            #+#    #+#             */
-/*   Updated: 2025/07/17 15:51:00 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/23 16:09:10 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "../../index_components.h"
 
 void	ft_putstr(char *str)
 {
