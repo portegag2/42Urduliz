@@ -1,3 +1,3 @@
-char *ft_strcapitalize(char *str)
-{}
+// char *ft_strcapitalize(char *str)
+// {}
 

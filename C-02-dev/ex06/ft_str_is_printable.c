@@ -1,4 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/24 15:34:57 by portega-          #+#    #+#             */
+/*   Updated: 2025/07/24 15:38:33 by portega-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../../index_components.h"
+
 int ft_str_is_printable(char *str)
 {
-	//Caracteres ASCII entre 32 y 126 son imprimibles.
+	if (*str)
+	{
+		while (*str)
+		{
+			if (!(*str >= ' ' && *str <= '~'))
+			{
+				return (0);
+			}
+			str++;
+		}
+	}
+	return (1);
 }

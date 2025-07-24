@@ -360,33 +360,59 @@ void main_C2_05(void) {
 
 /**************   FIN EJER 05  *************/
 
-void main_C2_02lll (void)
+/**************   INI EJER 06  *************/
+void run_tests()
 {
-	int	num;
-	int	*ptr1;
-	int **ptr2;
-	int ***ptr3;
-	int ****ptr4;
-	int *****ptr5;
-	int ******ptr6;
-	int *******ptr7;
-	int ********ptr8;
-	int *********ptr9;
+    struct Test {
+        char *input;
+        int expected;
+    };
 
-	num = 10;
-	ptr1 = &num;
-	ptr2 = &ptr1;
-	ptr3 = &ptr2;
-	ptr4 = &ptr3;
-	ptr5 = &ptr4;
-	ptr6 = &ptr5;
-	ptr7 = &ptr6;
-	ptr8 = &ptr7;
-	ptr9 = &ptr8;
-	printf("el puntero 9 finalmente contiene el valor: %d \n", *********ptr9);
-	ft_ultimate_ft(ptr9);
-	printf("el puntero 9 finalmente contiene el valor: %d", *********ptr9);
+    // Array de pruebas
+    struct Test tests[] = {
+        {"", 1},                     // String vacío
+        {"Hola Mundo!", 1},          // Todos imprimibles
+        {"12345@#$%^&*()", 1},       // Caracteres especiales
+        {" ", 1},                    // Espacio (ASCII 32)
+        {"Hola\tMundo", 0},          // Tabulador (\t)
+        {"Hola\nMundo", 0},          // Salto de línea (\n)
+        {"\x01\x02\x03", 0},         // Caracteres de control (ASCII 1-3)
+        {"ABC\037123", 0},           // Carácter de control en medio (ASCII 31, \037 en octal)
+        {"   \x0E   ", 0},           // Carácter de control entre espacios (ASCII 14)
+        {"Hola\x7F", 0},             // DEL (ASCII 127)
+        {"Hola\xFF", 0},             // ÿ (extended ASCII)
+        {NULL, 1}                    // Caso extra (NULL)
+    };
+
+    int num_tests = sizeof(tests) / sizeof(tests[0]);
+
+    for (int i = 0; i < num_tests; i++)
+    {
+        char *input = tests[i].input;
+        int expected = tests[i].expected;
+        int result = ft_str_is_printable(input);
+
+        printf("Test %d: \"%s\" -> ", i + 1, input ? input : "(NULL)");
+        if (result == expected)
+        {
+            printf("\033[0;32mOK\033[0m (Esperado: %d, Obtenido: %d)\n", expected, result);
+        }
+        else
+        {
+            printf("\033[0;31mFAIL\033[0m (Esperado: %d, Obtenido: %d)\n", expected, result);
+        }
+    }
 }
+
+void main_C2_06 (void)
+{
+	printf("=== Tests ft_str_is_printable ===\n");
+    run_tests();
+}
+
+/**************   FIN EJER 06  *************/
+
+
 
 void main_C2_03llll (void)
 {
@@ -520,9 +546,9 @@ int main_02(int argc)
             printf("=== Ejercicio 5 ===\n");
             main_C2_05();
             break;
-		case 7:
-            printf("=== Ejercicio 7 ===\n");
-            //main_C2_06();
+		case 6:
+            printf("=== Ejercicio 6 ===\n");
+            main_C2_06();
             break;
         default:
             printf("Error: Ejercicio %d no existe\n", argc);
