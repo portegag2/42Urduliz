@@ -1,4 +1,29 @@
-// char *ft_strlowcase(char *str)
-// {
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/24 16:52:19 by portega-          #+#    #+#             */
+/*   Updated: 2025/07/24 17:00:16 by portega-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-// }
+#include "../../index_components.h"
+
+char	*ft_strlowcase(char *str)
+{
+	char *ptr_begin;
+
+	ptr_begin = str;
+	while(*str)
+	{
+		if (*str >= 'A' && *str <= 'Z')
+		{
+			*str = *str + ' ';
+		}
+		str++;
+	}
+	return ptr_begin;
+}

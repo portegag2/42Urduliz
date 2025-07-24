@@ -411,7 +411,279 @@ void main_C2_06 (void)
 }
 
 /**************   FIN EJER 06  *************/
+/**************   INI EJER 07  *************/
+void run_tests_07()
+{
+    struct Test {
+        char *input;
+        char *expected;
+    };
 
+    // Array de pruebas
+    struct Test tests[] = {
+        {"hola mundo", "HOLA MUNDO"},        // Todas minúsculas
+        {"HOLA MUNDO", "HOLA MUNDO"},        // Ya está en mayúsculas
+        {"1234!@#$", "1234!@#$"},           // Sin letras (no cambia)
+        {"a", "A"},                          // Un solo carácter
+        {"z", "Z"},                          // 'z' debe convertirse en 'Z'
+        {"A b C d E", "A B C D E"},         // Alternando mayúsculas y minúsculas
+        {"", ""},                            // String vacío
+        {NULL, NULL}                         // Caso extra (NULL)
+    };
+
+    int num_tests = sizeof(tests) / sizeof(tests[0]);
+
+    for (int i = 0; i < num_tests; i++)
+    {
+        char *input = tests[i].input;
+        char *expected = tests[i].expected;
+
+        // Copiamos el input para no modificarlo directamente (si no es NULL)
+        char buffer[256];
+        if (input != NULL)
+        {
+            strcpy(buffer, input);
+            input = buffer;
+        }
+
+        char *result = ft_strupcase(input);
+
+        printf("Test %d: \"%s\" -> ", i + 1, input ? input : "(NULL)");
+
+        // Comparamos resultados
+        if (expected == NULL && result == NULL)
+        {
+            printf("\033[0;32mOK\033[0m (Esperado: NULL, Obtenido: NULL)\n");
+        }
+        else if (expected != NULL && result != NULL && strcmp(result, expected) == 0)
+        {
+            printf("\033[0;32mOK\033[0m (Esperado: \"%s\", Obtenido: \"%s\")\n", expected, result);
+        }
+        else
+        {
+            printf("\033[0;31mFAIL\033[0m (Esperado: \"%s\", Obtenido: \"%s\")\n",
+                   expected ? expected : "NULL",
+                   result ? result : "NULL");
+        }
+    }
+}
+
+void main_C2_07 (void)
+{
+	printf("=== Tests ft_str_is_printable ===\n");
+    run_tests_07();
+}
+
+/**************   FIN EJER 07  *************/
+/**************   INI EJER 08  *************/
+void run_tests_08()
+{
+    struct Test {
+        char *input;
+        char *expected;
+    };
+
+    // Array de pruebas
+    struct Test tests[] = {
+        {"HOLA MUNDO", "hola mundo"},        // Todas mayúsculas
+        {"hola mundo", "hola mundo"},        // Ya está en minúsculas
+        {"1234!@#$", "1234!@#$"},           // Sin letras (no cambia)
+        {"A", "a"},                          // Un solo carácter
+        {"Z", "z"},                          // 'Z' debe convertirse en 'z'
+        {"a B c D e", "a b c d e"},         // Alternando minúsculas y mayúsculas
+        {"", ""},                            // String vacío
+        {NULL, NULL}                         // Caso extra (NULL)
+    };
+
+    int num_tests = sizeof(tests) / sizeof(tests[0]);
+
+    for (int i = 0; i < num_tests; i++)
+    {
+        char *input = tests[i].input;
+        char *expected = tests[i].expected;
+
+        // Copiamos el input para no modificarlo directamente (si no es NULL)
+        char buffer[256];
+        if (input != NULL)
+        {
+            strcpy(buffer, input);
+            input = buffer;
+        }
+
+        char *result = ft_strlowcase(input);
+
+        printf("Test %d: \"%s\" -> ", i + 1, input ? input : "(NULL)");
+
+        // Comparamos resultados
+        if (expected == NULL && result == NULL)
+        {
+            printf("\033[0;32mOK\033[0m (Esperado: NULL, Obtenido: NULL)\n");
+        }
+        else if (expected != NULL && result != NULL && strcmp(result, expected) == 0)
+        {
+            printf("\033[0;32mOK\033[0m (Esperado: \"%s\", Obtenido: \"%s\")\n", expected, result);
+        }
+        else
+        {
+            printf("\033[0;31mFAIL\033[0m (Esperado: \"%s\", Obtenido: \"%s\")\n",
+                   expected ? expected : "NULL",
+                   result ? result : "NULL");
+        }
+    }
+}
+
+void main_C2_08 (void)
+{
+	printf("=== Tests ft_str_is_printable ===\n");
+    run_tests_08();
+}
+
+/**************   FIN EJER 08  *************/
+
+/**************   INI EJER 09  *************/
+void run_tests_09()
+{
+    struct Test {
+        char *input;
+        char *expected;
+    };
+
+    // Array de pruebas (casos normales y edge cases)
+    struct Test tests[] = {
+        // Caso del enunciado
+        {"salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un",
+         "Salut, Comment Tu Vas ? 42mots Quarante-Deux; Cinquante+Et+Un"},
+
+        // Casos básicos
+        {"hello world", "Hello World"},
+        {"THIS IS A TEST", "This Is A Test"},
+        {"123abc 456def", "123abc 456def"},  // Números no afectan
+        {"a", "A"},  // Single char
+        {"", ""},    // Empty string
+
+        // Caracteres especiales
+        {"what's up?", "What's Up?"},
+        {"dot.period", "Dot.Period"},
+        {"hyphen-word", "Hyphen-Word"},
+
+        // Edge cases
+        {"   extra   spaces   ", "   Extra   Spaces   "},
+        {"multiple   spaces", "Multiple   Spaces"},
+        {"UPPER lower", "Upper Lower"},
+        {NULL, NULL}  // NULL test
+    };
+
+    int num_tests = sizeof(tests) / sizeof(tests[0]);
+
+    for (int i = 0; i < num_tests; i++)
+    {
+        char *input = tests[i].input;
+        char *expected = tests[i].expected;
+
+        // Hacemos copia del input para no modificarlo directamente
+        char buffer[256];
+        if (input != NULL)
+        {
+            strncpy(buffer, input, sizeof(buffer));
+            buffer[sizeof(buffer)-1] = '\0';
+            input = buffer;
+        }
+
+        char *result = ft_strcapitalize(input);
+
+        printf("Test %d:\nInput:    \"%s\"\nExpected: \"%s\"\nResult:   \"%s\"\n",
+               i+1,
+               input ? input : "NULL",
+               expected ? expected : "NULL",
+               result ? result : "NULL");
+
+        if ((expected == NULL && result == NULL) ||
+            (expected != NULL && result != NULL && strcmp(expected, result) == 0))
+        {
+            printf("\033[0;32mOK\033[0m\n\n");
+        }
+        else
+        {
+            printf("\033[0;31mFAIL\033[0m\n\n");
+        }
+    }
+}
+
+void main_C2_09 (void)
+{
+	printf("=== Tests ft_strcapitalize ===\n");
+    run_tests_09();
+}
+
+/**************   FIN EJER 09  *************/
+
+/**************   INI EJER 10  *************/
+void run_tests_10()
+{
+    struct TestCase {
+        char *src;
+        unsigned int size;
+        unsigned int expected_return;
+        char *expected_dest;
+    };
+
+    // Casos de prueba
+    struct TestCase tests[] = {
+        // Casos básicos
+        {"hola", 5, 4, "hola"},          // Tamaño exacto (incluye '\0')
+        {"adios", 3, 5, "ad"},            // Truncamiento
+        {"hello", 0, 5, ""},              // size = 0 (no copia nada)
+        {"", 10, 0, ""},                  // src vacío
+
+        // Caracteres especiales (usamos octal para evitar warnings)
+        {"a\377b", 4, 3, "a\377b"},      // \377 = 0xFF (ÿ)
+        {"\001\002", 3, 2, "\001\002"},   // Caracteres de control
+
+        // Edge cases
+        {"123\0abc", 8, 3, "123"},       // \0 interno
+        {"space  ", 7, 6, "space "},      // Espacios al final
+        {NULL, 10, 0, ""}                 // src NULL
+    };
+
+    int num_tests = sizeof(tests) / sizeof(tests[0]);
+
+    for (int i = 0; i < num_tests; i++) {
+        char *src = tests[i].src;
+        unsigned int size = tests[i].size;
+        unsigned int expected_ret = tests[i].expected_return;
+        char *expected_dest = tests[i].expected_dest;
+
+        // Buffer para destino (inicializado con valores basura)
+        char dest_actual[50];
+        memset(dest_actual, 0xAA, sizeof(dest_actual));
+
+        // Ejecutamos ft_strlcpy
+        unsigned int ret_actual = ft_strlcpy(dest_actual, src, size);
+
+        // Verificación
+        printf("Test %d:\n  src: \"%s\"\n  size: %u\n", i+1, src ? src : "NULL", size);
+        printf("  Return: [%u] (expected: %u)\n", ret_actual, expected_ret);
+        printf("  Dest:   \"%s\" (expected: \"%s\")\n", dest_actual, expected_dest);
+
+        // Comparamos resultados
+        int ret_ok = (ret_actual == expected_ret);
+        int dest_ok = (size == 0) ? 1 : (strcmp(dest_actual, expected_dest)) == 0;
+
+        if (ret_ok && dest_ok) {
+            printf("  \033[0;32mOK\033[0m\n\n");
+        } else {
+            printf("  \033[0;31mFAIL\033[0m\n\n");
+        }
+    }
+}
+
+void main_C2_10 (void)
+{
+	printf("=== Tests ft_strcapitalize ===\n");
+    run_tests_10();
+}
+
+/**************   FIN EJER 10  *************/
 
 
 void main_C2_03llll (void)
@@ -549,6 +821,22 @@ int main_02(int argc)
 		case 6:
             printf("=== Ejercicio 6 ===\n");
             main_C2_06();
+            break;
+		case 7:
+            printf("=== Ejercicio 7 ===\n");
+            main_C2_07();
+            break;
+		case 8:
+            printf("=== Ejercicio 8 ===\n");
+            main_C2_08();
+            break;
+		case 9:
+            printf("=== Ejercicio 9 ===\n");
+            main_C2_09();
+            break;
+		case 10:
+            printf("=== Ejercicio 10 ===\n");
+            main_C2_10();
             break;
         default:
             printf("Error: Ejercicio %d no existe\n", argc);
