@@ -45,6 +45,7 @@ char	*ft_strupcase(char *str);
 char	*ft_strlowcase(char *str);
 char	*ft_strcapitalize(char *str);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
+void	ft_putstr_non_printable(char *str);
 
 #endif
 

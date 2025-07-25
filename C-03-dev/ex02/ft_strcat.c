@@ -1,16 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_memory.c                                  :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/25 12:14:44 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/25 12:17:30 by portega-         ###   ########.fr       */
+/*   Created: 2025/07/25 13:36:26 by portega-          #+#    #+#             */
+/*   Updated: 2025/07/25 14:22:56 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* void *ft_print_memory(void *addr, unsigned int size)
+char *ft_strcat(char *dest, char *src)
 {
+	char *ptr_dest;
 
-} */
+	ptr_dest = dest;
+	while (*dest != '\0')
+	{
+		dest++;
+	}
+	while (*src)
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	*dest = '\0';
+	return (ptr_dest);
+}

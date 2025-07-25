@@ -685,6 +685,31 @@ void main_C2_10 (void)
 
 /**************   FIN EJER 10  *************/
 
+/**************   INI EJER 11  *************/
+void test_putstr_non_printable(char *input, char *expected_output) {
+    printf("Input:      \"%s\"\n", input);
+    printf("Expected:   \"%s\"\n", expected_output);
+    printf("Your output: \"");
+    ft_putstr_non_printable(input); // Tu función debe imprimir directamente
+    printf("\"\n\n");
+}
+
+void main_C2_11 (void)
+{
+	// Casos de prueba
+    test_putstr_non_printable("Hello World", "Hello World");
+    test_putstr_non_printable("Hello\nWorld", "Hello\0aWorld");
+    test_putstr_non_printable("Hola\tMundo\r", "Hola\09Mundo\0d");
+    test_putstr_non_printable("\x01\x02\x03", "\01\02\03");
+    test_putstr_non_printable("Zero\0Terminator", "Zero\00Terminator");
+    test_putstr_non_printable("Café\xFF", "Café\0ff");
+    test_putstr_non_printable("", "");
+    test_putstr_non_printable("\x7F\x1F\x0B", "\07f\01f\0b");
+    test_putstr_non_printable("Test:\t\x0A\x7F End", "Test:\09\0a\07f End");
+}
+
+/**************   FIN EJER 11  *************/
+
 
 void main_C2_03llll (void)
 {
@@ -837,6 +862,10 @@ int main_02(int argc)
 		case 10:
             printf("=== Ejercicio 10 ===\n");
             main_C2_10();
+            break;
+		case 11:
+            printf("=== Ejercicio 11 ===\n");
+            main_C2_11();
             break;
         default:
             printf("Error: Ejercicio %d no existe\n", argc);

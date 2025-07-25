@@ -1,16 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_memory.c                                  :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/25 12:14:44 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/25 12:17:30 by portega-         ###   ########.fr       */
+/*   Created: 2025/07/25 12:21:44 by portega-          #+#    #+#             */
+/*   Updated: 2025/07/25 13:19:09 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* void *ft_print_memory(void *addr, unsigned int size)
-{
+#include "../../index_components.h"
 
-} */
+int	ft_strcmp(char *s1, char *s2)
+{
+	while (*s1 == *s2 && *s1 && *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
+
+}
