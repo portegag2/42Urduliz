@@ -6,7 +6,7 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 21:08:31 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/23 21:36:34 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/26 09:46:55 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 int	ft_str_is_numeric(char *str)
 {
-	if (*str){
-		while(*str)
+	if (*str)
+	{
+		while (*str)
 		{
 			if (!(*str >= '0' && *str <= '9'))
-				return 0;
+				return (0);
 			str++;
 		}
 	}
-	return 1;
+	return (1);
 }

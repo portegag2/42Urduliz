@@ -6,7 +6,7 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 17:01:36 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/24 17:55:56 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/26 15:56:16 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_local_str_is_alpha(char *str)
 {
 	if (*str)
 	{
-		if (*str < 'A' || *str > 'z')
+		if (!((*str >= 'A' && *str <= 'Z') || (*str >= 'a' && *str <= 'z')))
 			return (0);
 	}
 	return (1);
@@ -60,7 +60,7 @@ char	*ft_strcapitalize(char *str)
 {
 	char	*ptr_begin;
 	char	*char_temp;
-	int	string_started;
+	int		string_started;
 
 	char_temp = "";
 	ptr_begin = str;
@@ -84,4 +84,3 @@ char	*ft_strcapitalize(char *str)
 	}
 	return (ptr_begin);
 }
-

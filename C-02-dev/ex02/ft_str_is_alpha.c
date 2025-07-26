@@ -6,17 +6,19 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 20:59:54 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/23 21:06:11 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/26 15:58:12 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../../index_components.h"
 
 int	ft_str_is_alpha(char *str)
 {
 	if (*str)
 	{
-		while(*str)
+		while (*str)
 		{
-			if ( *str < 'A' || *str > 'z')
+			if (!((*str >= 'A' && *str <= 'Z') || (*str >= 'a' && *str <= 'z')))
 			{
 				return (0);
 			}

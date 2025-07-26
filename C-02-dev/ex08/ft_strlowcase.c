@@ -6,7 +6,7 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 16:52:19 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/24 17:00:16 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/26 08:16:40 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strlowcase(char *str)
 {
-	char *ptr_begin;
+	char	*ptr_begin;
 
 	ptr_begin = str;
-	while(*str)
+	while (*str)
 	{
 		if (*str >= 'A' && *str <= 'Z')
 		{
@@ -25,5 +25,5 @@ char	*ft_strlowcase(char *str)
 		}
 		str++;
 	}
-	return ptr_begin;
+	return (ptr_begin);
 }

@@ -6,7 +6,7 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 22:06:06 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/23 22:12:22 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/26 08:15:09 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_str_is_lowercase(char *str)
 {
-	if(*str)
+	if (*str)
 	{
-		while(*str)
+		while (*str)
 		{
-			if(!(*str >= 'a' && *str <= 'z'))
+			if (!(*str >= 'a' && *str <= 'z'))
 			{
 				return (0);
 			}

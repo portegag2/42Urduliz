@@ -4,7 +4,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 # Archivos fuente específicos
-SRCS = main.c C-00-dev1/main_00.c C-01-dev/main_01.c C-02-dev/main_02.c $(wildcard C-*/ex*/ft_*.c)
+SRCS = main.c C-00-dev1/main_00.c C-01-dev/main_01.c C-02-dev/main_02.c C-03-dev/main_03.c $(wildcard C-*/ex*/ft_*.c)
 
 # Archivos objeto
 OBJS = $(SRCS:.c=.o)
@@ -31,5 +31,7 @@ re: fclean $(NAME)
 # Verificar norminette
 norm:
 #	norminette -R CheckForbiddenSourceHeader $(SRCS) *.h
+#	norminette -R CheckForbiddenSourceHeader C-02-dev*/ex*/*.c *.h
+	norminette -R CheckForbiddenSourceHeader C-02-dev*/ex*/*.c
 
 .PHONY: clean fclean re norm

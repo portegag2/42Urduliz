@@ -25,6 +25,8 @@ int main(int argc, char **argv)
         main_01(atoi(argv[2]));
     else if (lesson == 2)
         main_02(atoi(argv[2]));
+    else if (lesson == 3)
+        main_03(atoi(argv[2]));
     else
     {
         ft_putstr("Error: lección no encontrada\n");

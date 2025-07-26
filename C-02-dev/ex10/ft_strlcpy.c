@@ -6,7 +6,7 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 19:01:21 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/24 20:52:21 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/26 08:19:39 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	count = 0;
 	while (*src)
 	{
-
 		if (n > 1)
 		{
 			*dest = *src;
@@ -36,6 +35,5 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 		count++;
 		n--;
 	}
-
 	return (count);
 }

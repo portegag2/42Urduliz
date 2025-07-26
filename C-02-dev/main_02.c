@@ -178,7 +178,7 @@ void main_C2_02 (void)
     test_and_print0202("String vacío", "");
 
     // Caso 2: Solo letras mayúsculas
-    test_and_print0202("Solo mayúsculas", "ABCDEF");
+    test_and_print0202("Solo mayúsculas", "ABCDEF[");
 
     // Caso 3: Solo letras minúsculas
     test_and_print0202("Solo minúsculas", "abcdef");
@@ -557,13 +557,13 @@ void run_tests_09()
         // Casos básicos
         {"hello world", "Hello World"},
         {"THIS IS A TEST", "This Is A Test"},
-        {"123abc 456def", "123abc 456def"},  // Números no afectan
+        {"123abc 456[def", "123abc 456[Def"},  // Números no afectan
         {"a", "A"},  // Single char
         {"", ""},    // Empty string
 
         // Caracteres especiales
         {"what's up?", "What's Up?"},
-        {"dot.period", "Dot.Period"},
+        {"dot[period", "Dot[Period"},
         {"hyphen-word", "Hyphen-Word"},
 
         // Edge cases

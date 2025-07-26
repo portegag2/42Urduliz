@@ -6,13 +6,15 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/25 13:36:26 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/25 14:22:56 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/26 10:45:00 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcat(char *dest, char *src)
+#include "../../index_components.h"
+
+char	*ft_strcat(char *dest, char *src)
 {
-	char *ptr_dest;
+	char	*ptr_dest;
 
 	ptr_dest = dest;
 	while (*dest != '\0')

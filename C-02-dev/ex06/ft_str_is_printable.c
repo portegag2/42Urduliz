@@ -6,13 +6,13 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 15:34:57 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/24 15:38:33 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/26 08:15:58 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../index_components.h"
 
-int ft_str_is_printable(char *str)
+int	ft_str_is_printable(char *str)
 {
 	if (*str)
 	{
