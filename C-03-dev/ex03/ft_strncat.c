@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/25 12:21:44 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/27 10:43:57 by portega-         ###   ########.fr       */
+/*   Created: 2025/07/27 07:51:20 by portega-          #+#    #+#             */
+/*   Updated: 2025/07/27 07:57:20 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../index_components.h"
 
-int	ft_strcmp(char *s1, char *s2)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	while (*s1 == *s2 && *s1 && *s2)
+	char	*ptr_dest;
+
+	ptr_dest = dest;
+	while (*dest != '\0')
 	{
-		s1++;
-		s2++;
+		dest++;
 	}
-	return (*s1 - *s2);
+	while (*src && nb > 0)
+	{
+		*dest = *src;
+		dest++;
+		src++;
+		nb--;
+	}
+	*dest = '\0';
+	return (ptr_dest);
 }

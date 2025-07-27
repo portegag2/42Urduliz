@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/25 12:21:44 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/27 10:43:57 by portega-         ###   ########.fr       */
+/*   Created: 2025/07/27 08:05:04 by portega-          #+#    #+#             */
+/*   Updated: 2025/07/27 13:49:19 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../index_components.h"
 
-int	ft_strcmp(char *s1, char *s2)
+char	*ft_strstr(char *str, char *to_find)
 {
-	while (*s1 == *s2 && *s1 && *s2)
+	int		len_to_find;
+	int		count_temp;
+
+	len_to_find = 0;
+	count_temp = 0;
+	while (to_find[len_to_find] != '\0')
+		len_to_find++;
+	if (*to_find == '\0')
+		return (str);
+	while (*str)
 	{
-		s1++;
-		s2++;
+		count_temp = 0;
+		while (str[count_temp] == to_find[count_temp])
+		{
+			if (count_temp == len_to_find - 1)
+				return (str);
+			count_temp++;
+		}
+		str++;
 	}
-	return (*s1 - *s2);
+	return (0);
 }

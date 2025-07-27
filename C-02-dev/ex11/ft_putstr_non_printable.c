@@ -6,10 +6,11 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/25 09:59:47 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/26 09:48:24 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/26 19:52:05 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "../../index_components.h"
 
 int	ft_local_str_is_printable(char *str)
