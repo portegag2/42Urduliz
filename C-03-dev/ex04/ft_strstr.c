@@ -6,7 +6,7 @@
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 08:05:04 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/27 13:49:19 by portega-         ###   ########.fr       */
+/*   Updated: 2025/07/29 20:15:44 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,11 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (0);
 }
+
+   			kai
+			012
+   			egunon bizkaia hoy llueve
+                      012
+ strcat     ###########
+len_tofind=3
+                      012
