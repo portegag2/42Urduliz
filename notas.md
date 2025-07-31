@@ -42,5 +42,8 @@ matej
 ruben
 nico
 hamid
+eneko
+asall
+jumill
 
 
