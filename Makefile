@@ -32,6 +32,6 @@ re: fclean $(NAME)
 norm:
 #	norminette -R CheckForbiddenSourceHeader $(SRCS) *.h
 #	norminette -R CheckForbiddenSourceHeader C-02-dev*/ex*/*.c *.h
-	norminette -R CheckForbiddenSourceHeader C-02-dev*/ex*/*.c C-03-dev*/ex*/*.c
+#	norminette -R CheckForbiddenSourceHeader C-02-dev*/ex*/*.c C-03-dev*/ex*/*.c
 
 .PHONY: clean fclean re norm

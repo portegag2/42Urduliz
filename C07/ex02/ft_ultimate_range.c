@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: portega- <portega-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/25 12:21:44 by portega-          #+#    #+#             */
-/*   Updated: 2025/07/27 10:58:31 by portega-         ###   ########.fr       */
+/*   Created: 2025/07/31 09:21:18 by portega-          #+#    #+#             */
+/*   Updated: 2025/07/31 09:40:31 by portega-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../index_components.h"
+#include <stdlib.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_ultimate_range(int **range, int min, int max)
 {
-	if (n == 0)
+	int	size_range;
+	int	i;
+
+	i = 0;
+	size_range = 0;
+	if (min >= max)
 	{
+		*range = NULL;
 		return (0);
 	}
-	while (*s1 == *s2 && *s1 && *s2 && n > 0)
+	*range = malloc(sizeof(int) * (max - min));
+	size_range = max - min;
+	if (*range == NULL)
+		return (-1);
+	while (min < max)
 	{
-		s1++;
-		s2++;
-		n--;
+		range[0][i] = min++;
+		i++;
 	}
-	if (n == 0)
-		return (0);
-	return (*s1 - *s2);
+	return (size_range);
 }
